@@ -1,6 +1,6 @@
 //connections
 let express = require("express");
-let burger = require("../models/burger");
+let burger = require("../models/burger.js");
 let router = express.Router();
 
 //Code for the controller
