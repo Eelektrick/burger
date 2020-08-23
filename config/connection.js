@@ -1,5 +1,4 @@
-  
-// Set up MySQL connection.
+  // Set up MySQL connection.
 let mysql = require("mysql");
 
 let connection = mysql.createConnection({
