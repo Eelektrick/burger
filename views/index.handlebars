@@ -4,7 +4,7 @@
             <h1> Eat Da Burger </h1>
 			<img src="/images/burger.jpg" alt="burger" />
 		</div>
-		<div class="col-md-6 text-center" class="task">
+		<div class="col-md-5 text-center" id="created" class="task">
 		    <div class="row">
                 <h3>Burgers to be Devoured</h3>
 			    {{#each burgers}}
@@ -14,15 +14,15 @@
 				</div>
 				<div class="col-md-3 text-center">
 					<form class="devour-form button-size">
-						<input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
-						<button type="submit" class="btn btn-default">Devour it!</button>
+						<input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
+						<button type="submit" class="btn btn-default devour">Devour it!</button>
 					</form>
 				</div>
 				{{/unless}}
 			    {{/each}}
 			</div>
 		</div>
-		<div class="col-md-6 text-center" class="task">
+		<div class="col-md-5 text-center" id="eaten" class="task">
             <h3>Burgers that have been Devoured</h3>
 			{{#each burgers}}
 			{{#if this.devoured}}
@@ -36,9 +36,9 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12 text-center enter_section">
-			<form action="/burgers/create" method="POST">
-				<input type="text" class="form-control" name="burger_name" value="" id="enter_text">
-				<button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
+			<form action="/burgers/create" class="create-form" method="POST">
+				<input type="text" class="form-control" name="burger_name" id="enter-text">
+				<button type="submit" class="btn btn-dark" id="text-button">Submit</button>
 			</form>
 			<p>Enter a burger you want to devour then Click the "Submit" button.</p>
 		</div>

@@ -1,19 +1,47 @@
 $(document).ready(function() {
     
-    $(".devour-form").on("submit", function(event) {
+    $(".devour").on("click", function(event) {
       event.preventDefault();
   
-      let burger_id = $(this).children(".burger_id").val();
+      let burger_id = $(this).data("id");
 
-      //console.log(burger_id);
-      
-      $.ajax({
-        method: "PUT",
-        url: "/burgers/" + burger_id
-      }).then(function(data) {
+      let beenDevoured = {
+          devoured: true
+      };
+
+      $.ajax("/api/burgers/" + burger_id,{
+        type: "PUT",
+        data: beenDevoured
+      })
+      .then(function(){
+
+        console.log("Burger has been eaten", beenDevoured);
         // reload page to display devoured burger in proper column
         location.reload();
-      });
-  
+      }); 
     });
-  });
+
+    //This will create the post  
+    $(".create-form").on("submit", function(event) {
+        // Make sure to preventDefault on a submit event.
+        event.preventDefault();
+    
+        let newBurger = {
+            burger_name: $("#enter-text").val().trim(),
+            devoured: 0
+        };
+    
+        // Send the POST request.
+        $.ajax("/api/burgers", {
+          type: "POST",
+          data: newBurger
+        })
+        .then(
+            function() {
+                console.log("created new Burger");
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
+    });
+});
