@@ -1,0 +1,17 @@
+img{
+    height: 250px;
+    width: 250px;
+}
+
+h1{
+    font-size: 78px;
+}
+
+h3{
+    font-weight: bold;
+}
+
+body{
+    background-color: lightgray;
+}
+

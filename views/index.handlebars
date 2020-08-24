@@ -1,12 +1,13 @@
 <div class="container">
-	<div class="row">
-		<div class="col-md-12 text-center" id="top">
+    <div class="row">
+	    <div class="col-md-12 text-center" id="top">
             <h1> Eat Da Burger </h1>
-			<img src="/public/images/burger.jpg" alt="burger" />
+			<img src="/images/burger.jpg" alt="burger" />
 		</div>
 		<div class="col-md-6 text-center" class="task">
-			<div class="row">
-			  {{#each burger_data}}
+		    <div class="row">
+                <h3>Burgers to be Devoured</h3>
+			    {{#each burgers}}
 			  	{{#unless this.devoured}}
 				<div class="col-md-9 text-center">
 					<pre>{{this.id}}. {{this.burger_name}}</pre> 
@@ -18,15 +19,16 @@
 					</form>
 				</div>
 				{{/unless}}
-			  {{/each}}
+			    {{/each}}
 			</div>
 		</div>
 		<div class="col-md-6 text-center" class="task">
-			  {{#each burger_data}}
-			  	{{#if this.devoured}}
-			  		<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
-				{{/if}}
-			  {{/each}}
+            <h3>Burgers that have been Devoured</h3>
+			{{#each burgers}}
+			{{#if this.devoured}}
+			  	<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
+			{{/if}}
+			{{/each}}
 		</div>
 	</div>
 </div>
