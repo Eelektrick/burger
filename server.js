@@ -1,5 +1,6 @@
 let express = require("express");
 
+//connect to the port 8080
 let PORT = process.env.PORT || 8080;
 let app = express();
 
