@@ -40,7 +40,7 @@ helped me fixed my small mistakes.
 
 # Link 
 
-[Link to Heroku site]()
+[Link to Heroku site](https://gluttony-of-burgers.herokuapp.com/)
 
 # Screenshot
 
