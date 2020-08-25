@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
     
     $(".devour").on("click", function(event) {
       event.preventDefault();
