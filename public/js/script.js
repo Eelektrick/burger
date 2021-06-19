@@ -51,13 +51,13 @@ $(function() {
 
     let burger_id = $(this).data("id");
 
-    let beenDevoured = {
-        devoured: null
+    let burger = {
+        devoured: ""
     };
 
     $.ajax("/api/burgers/" + burger_id,{
       type: "PUT",
-      data: beenDevoured
+      data: burger
     })
     .then(
       function() {
