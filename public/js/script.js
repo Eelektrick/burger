@@ -45,3 +45,9 @@ $(function() {
         );
     });
 });
+
+//clear devoured burgers list
+$(document).on('click', "#reset-button", function(){
+  //reset form
+  document.getElementById('.form-control').reset();
+});
