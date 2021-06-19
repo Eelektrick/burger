@@ -27,7 +27,7 @@
 			{{#each burgers}}
 			{{#if this.devoured}}
 				<form>
-					<input class="form-control eaten" type="text" placeholder="{{this.id}} . {{this.burger_name}} readonly">
+					<input class="form-control eaten" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
 					<button type="clear" class="btn btn-default clear" data-id="{{this.id}}">Clear</button>
 				</form>
 			{{/if}}

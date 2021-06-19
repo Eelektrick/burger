@@ -38,7 +38,7 @@ body{
     font-weight: bold; 
 }
 
-#text-button, #clear-button {
+#text-button {
     margin-top: 10px;
     margin-bottom: 18px;
   }
@@ -63,4 +63,8 @@ body{
 
 p{
     font-weight: bold;
+}
+
+.clear{
+    display: inline-block;
 }
