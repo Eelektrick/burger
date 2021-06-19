@@ -49,19 +49,19 @@ $(function() {
   $(".clear").on("click", function(event){
     event.preventDefault();
 
+    let burger_id = $(this).data("id");
+
     let beenDevoured = {
         devoured: false
     };
-    let attrID = $(this).data('id');
 
-    //Ajax Request
-    $.ajax("/api/burgers/" + attrID, {
-      type: "DELETE",
+    $.ajax("/api/burgers/" + burger_id,{
+      type: "PUT",
       data: beenDevoured
     })
     .then(
       function() {
-          console.log("created new Burger");
+          console.log("old Burger");
           // Reload the page to get the updated list
           location.reload();
       }
