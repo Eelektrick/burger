@@ -51,13 +51,8 @@ $(function() {
 
     let burger_id = $(this).data("id");
 
-    let burger = {
-        devoured: ""
-    };
-
     $.ajax("/api/burgers/" + burger_id,{
-      type: "PUT",
-      data: burger
+      type: "DELETE"
     })
     .then(
       function() {
@@ -66,15 +61,5 @@ $(function() {
           location.reload();
       }
     );
-    //$(".eaten").html("");
-    //$(".eaten")[0].reset();
   })
 });
-
-// //clear devoured burgers list
-// $("#clear-button").on('click', function(){
-//   //reset form
-//   //$("#devoured").hmtl("");
-//   $("#devoured")[0].reset();
-//   //document.getElementById('#devoured').reset();
-// });
