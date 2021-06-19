@@ -26,7 +26,7 @@
             <h3>Burgers that have been Devoured</h3>
 			{{#each burgers}}
 			{{#if this.devoured}}
-			  	<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
+			  	<input id="devoured" class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
 			{{/if}}
 			{{/each}}
 		</div>

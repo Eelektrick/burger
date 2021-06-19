@@ -38,7 +38,7 @@ body{
     font-weight: bold; 
 }
 
-#text-button {
+#text-button, #reset-button {
     margin-top: 10px;
     margin-bottom: 18px;
   }
