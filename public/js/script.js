@@ -1,12 +1,4 @@
 $(function() {
-
-  //clear devoured burgers list
-  $("#clear-button").on('click', function(){
-    //reset form
-    $("#devoured").hmtl("");
-    //$("#devoured")[0].reset();
-    //document.getElementById('#devoured').reset();
-  });
     
   $(".devour").on("click", function(event) {
     event.preventDefault();
@@ -52,4 +44,12 @@ $(function() {
           }
       );
   });
+});
+
+//clear devoured burgers list
+$("#clear-button").on('click', function(){
+  //reset form
+  $("#devoured").hmtl("");
+  //$("#devoured")[0].reset();
+  //document.getElementById('#devoured').reset();
 });
