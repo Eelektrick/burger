@@ -49,7 +49,24 @@ $(function() {
   $(".clear").on("click", function(event){
     event.preventDefault();
 
-    $(".eaten").html("");
+    let beenDevoured = {
+        devoured: false
+    };
+    let attrID = $(this).data('id');
+
+    //Ajax Request
+    $.ajax("/api/burgers/" + attrID, {
+      type: "DELETE",
+      data: beenDevoured
+    })
+    .then(
+      function() {
+          console.log("created new Burger");
+          // Reload the page to get the updated list
+          location.reload();
+      }
+    );
+    //$(".eaten").html("");
     //$(".eaten")[0].reset();
   })
 });
