@@ -44,12 +44,19 @@ $(function() {
           }
       );
   });
+
+  //clear devoured burgers list
+  $(".clear").on("click", function(event){
+    event.preventDefault();
+
+    $(".eaten")[0].reset();
+  })
 });
 
-//clear devoured burgers list
-$("#clear-button").on('click', function(){
-  //reset form
-  //$("#devoured").hmtl("");
-  $("#devoured")[0].reset();
-  //document.getElementById('#devoured').reset();
-});
+// //clear devoured burgers list
+// $("#clear-button").on('click', function(){
+//   //reset form
+//   //$("#devoured").hmtl("");
+//   $("#devoured")[0].reset();
+//   //document.getElementById('#devoured').reset();
+// });

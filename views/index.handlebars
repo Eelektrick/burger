@@ -26,7 +26,11 @@
             <h3>Burgers that have been Devoured</h3>
 			{{#each burgers}}
 			{{#if this.devoured}}
-			  	<input id="devoured" class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
+				<form>
+					<input class="form-control eaten" type="text" placeholder="{{this.id}} . {{this.burger_name}}">
+					<button type="clear" class="btn btn-default clear" data-id={{this.id}}>Clear</button>
+				</form>
+				<p>Click the "Clear" button to clear burgers devoured.</p>
 			{{/if}}
 			{{/each}}
 		</div>
@@ -39,10 +43,10 @@
 			<form action="/burgers/create" class="create-form" method="POST">
 				<input type="text" class="form control" name="burger_name" id="enter-text">
 				<button type="submit" class="btn btn-dark" id="text-button">Submit</button>
-				<button name="ClearForm" type="button" class="btn btn-dark" id="clear-button">Clear</button>
+				{{!-- <button name="ClearForm" type="clear" class="btn btn-dark" id="clear-button">Clear</button> --}}
 			</form>
 			<p>Enter a burger you want to devour then Click the "Submit" button.</p>
-			<p>Click the "Clear" button to clear all burgers devoured.</p>
+			{{!-- <p>Click the "Clear" button to clear burgers devoured.</p> --}}
 		</div>
 	</div>
 </div>
