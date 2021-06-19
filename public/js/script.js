@@ -49,7 +49,7 @@ $(function() {
   $(".clear").on("click", function(event){
     event.preventDefault();
 
-    $(".eaten").hmtl("");
+    $(".eaten").html("");
     //$(".eaten")[0].reset();
   })
 });
