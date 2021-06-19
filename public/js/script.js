@@ -1,9 +1,10 @@
 $(function() {
 
   //clear devoured burgers list
-  $("#reset-button").on('click', function(){
+  $("#clear-button").on('click', function(){
     //reset form
-    $("#eaten")[0].reset();
+    $("#devoured").hmtl("");
+    //$("#devoured")[0].reset();
     //document.getElementById('#devoured').reset();
   });
     
