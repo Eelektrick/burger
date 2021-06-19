@@ -3,7 +3,8 @@ $(function() {
   //clear devoured burgers list
   $("#reset-button").on('click', function(){
     //reset form
-    document.getElementById('#devoured').reset();
+    $("#devoured")[0].reset();
+    //document.getElementById('#devoured').reset();
   });
     
   $(".devour").on("click", function(event) {
