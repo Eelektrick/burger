@@ -49,7 +49,8 @@ $(function() {
   $(".clear").on("click", function(event){
     event.preventDefault();
 
-    $(".eaten")[0].reset();
+    $(".eaten").hmtl("");
+    //$(".eaten")[0].reset();
   })
 });
 

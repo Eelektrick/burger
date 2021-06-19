@@ -28,12 +28,12 @@
 			{{#if this.devoured}}
 				<form>
 					<input class="form-control eaten" type="text" placeholder="{{this.id}} . {{this.burger_name}}">
-					<button type="clear" class="btn btn-default clear" data-id={{this.id}}>Clear</button>
+					<button type="clear" class="btn btn-default clear" data-id="{{this.id}}">Clear</button>
 				</form>
-				<p>Click the "Clear" button to clear burgers devoured.</p>
 			{{/if}}
 			{{/each}}
 		</div>
+		<p>Click the "Clear" button to clear burgers devoured.</p>
 	</div>
 </div>
 
