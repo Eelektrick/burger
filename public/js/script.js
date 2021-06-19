@@ -52,7 +52,7 @@ $(function() {
     let burger_id = $(this).data("id");
 
     let beenDevoured = {
-        devoured: false
+        devoured: null
     };
 
     $.ajax("/api/burgers/" + burger_id,{
